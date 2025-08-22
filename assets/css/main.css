@@ -54,7 +54,6 @@ body {
 
 .features-grid {
   display: flex;
-
   transition: transform 0.5s ease;
   gap: 20px;
 }
@@ -238,6 +237,7 @@ button {
   transition: border-color 0.25s;
   color: white;
 }
+
 button:hover {
   /* border-color: #646cff; */
   background: #f0f0f8 !important;
@@ -320,5 +320,28 @@ button:focus-visible {
 @media (max-width: 480px) {
   .feature-item {
     flex: 0 0 calc(100% - 62px);
+    min-height: 290px;
+    max-height: 290px;
+    /* flex-shrink: 0; */
   }
+
+ 
+  .features-grid {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* transition: transform 0.5s ease;
+    gap: 0px; */
+/* 
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto); */
+    display: flex;
+    flex-direction: column;
+    /* flex: 0 0 calc(100% - 62px); */
+    height: 660px;
+    /* max-height: 690px; */
+  /* overflow-y: hidden; */
+  }
+  
 }
