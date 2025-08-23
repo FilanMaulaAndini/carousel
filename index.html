@@ -109,7 +109,7 @@
           const reviewsData = await getPlaceDetails(
             "ChIJ2dGMjMMEdkgRqVqkuXQkj7c"
           );
-          console.log("Reviews count:", reviewsData); 
+          // console.log("Reviews count:", reviewsData); 
           reviews = reviewsData || [];
           initCarousel();
           
@@ -154,10 +154,10 @@
       }
 
       function updateCarousel() {
-        const itemHeight = container.offsetHeight;
-        console.log("Item Height:", container.offsetHeight);
+        const itemHeight = container.offsetHeight  + 56
+
         if ( window.innerWidth <= 480 ) {
-          container.style.transform = `translateY(-${currentSlide * 716}px)`;
+          container.style.transform = `translateY(-${currentSlide * itemHeight}px)`;
         } else {
           container.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
